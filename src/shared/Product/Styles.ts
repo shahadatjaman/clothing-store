@@ -17,8 +17,6 @@ interface HoverProps {
 };
 
 
-
-
 /* Wrapper component */
 
 export const Wrapper = styled.div``;
@@ -73,8 +71,6 @@ export const ProductTitle = styled.h2`
   font-weight: 400;
   margin-top: 16px;
 `;
-
-
 
 
 

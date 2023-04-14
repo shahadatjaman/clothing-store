@@ -16,8 +16,8 @@ import { Button } from '../../shared/Button/';
 import { Description } from './Styles';
 import Link from 'next/link';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
-import Buttons from './button-group';
 import { ProductPropsType } from '@/types/productPropsType';
+import ButtonsGroup from './button-group';
 
 const Product: FC<ProductPropsType> = (props) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -39,7 +39,7 @@ const Product: FC<ProductPropsType> = (props) => {
         {/*============ = Product Image = ============*/}
         <ProductImage>
           {/* Buttons Groups  */}
-          <Buttons isHovered={isHovered} _id={''} />
+          <ButtonsGroup isHovered={isHovered} _id={''} />
 
           <Link href={'/'}>
             <Img

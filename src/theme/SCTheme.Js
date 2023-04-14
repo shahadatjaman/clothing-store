@@ -13,7 +13,7 @@ export const theme = {
 
   /* Neutral Colors */
   gray: '#A3A5AD',
-  'gray-light': '#BEBFC4',
+  'grayLight': '#BEBFC4',
 
   white: '#FFFFFF',
   'white-dark': '#F1F2F3',

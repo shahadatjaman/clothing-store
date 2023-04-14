@@ -1,14 +1,9 @@
 import styled from "styled-components";
 
-/* Define interface for props */
 
-interface ButtonsProps {
-    isHovered : boolean;
-  };
-  
   /* Prodcut buttons Component */
   
-  export const ProductButtons = styled.div<ButtonsProps>`
+  export const ProductButtons = styled.div`
     position: absolute;
     max-width: 100%;
     top: 5%;
@@ -16,11 +11,16 @@ interface ButtonsProps {
     display: flex;
     justify-content: end;
     flex-direction: column;
-    opacity: ${(props) => props.isHovered ? 1 : 0 ?? 1};
     transition: all 0.2s ease-out;
   `;
   
-  export const ProductButton = styled.button`
+  /* Define interface for props */
+
+  interface ButtonProps {
+    isHovered : boolean;
+  };
+
+  export const ProductButton = styled.button<ButtonProps>`
     border: none; 
     background: ${({theme}) => theme.colors?.white};
     width: 40px;
@@ -29,6 +29,7 @@ interface ButtonsProps {
     transition: all 0.2s linear;
     cursor: pointer;
     margin-bottom: 0.5rem;
+    display: ${(props) => props.isHovered ? 'block' : 'none'};
     &:hover {
       // Add styles for hovered state
       background: ${({theme}) => theme.colors?.primary};

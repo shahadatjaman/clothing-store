@@ -1,13 +1,25 @@
-import React, { FC, ReactElement, ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { ProductButton } from './Styles';
 interface ButtonProps {
   children?: ReactNode;
   text: string;
   element: ReactNode;
+  clickHandler?: () => void;
+  isHovered: boolean;
 }
 
-const Button: FC<ButtonProps> = (props, { children }) => {
-  return <ProductButton title={props.text}>{props.element}</ProductButton>;
+const Button: FC<ButtonProps> = (props) => {
+  const { text, element, clickHandler } = props;
+
+  return (
+    <ProductButton
+      isHovered={props.isHovered}
+      onClick={clickHandler}
+      title={text}
+    >
+      {element}
+    </ProductButton>
+  );
 };
 
 export default Button;
