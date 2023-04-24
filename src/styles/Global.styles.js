@@ -5,17 +5,19 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Arial, sans-serif;
     background : #ffffff;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6{
-  font-family : ${(props) => props.theme.fontFamily.hind}
+*{
+     font-family : ${(props) => props.theme.fontFamily.hind}
   }
   ul{
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  button.Styles__Button-sc-15r0ui4-2.ebCBww {
+    left: 2%;
+  }
+  button.Styles__Button-sc-15r0ui4-2.jImDrA {
+    right: 2%;
   }
 `;

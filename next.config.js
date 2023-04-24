@@ -7,7 +7,10 @@ const nextConfig = {
   },
   compiler : {
     styledComponents: true
-  }
+  },
+  env: {
+    FONTAWESOME_TOKEN: process.env.FONTAWESOME_TOKEN,
+  },
 };
 
 module.exports = (nextConfig);

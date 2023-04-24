@@ -1,11 +1,13 @@
 import { ReactNode } from "react";
 
 export interface DropdownPropsTypes {
-    children?: ReactNode;
+    children: ReactNode;
     isOpen: boolean;
-    cloesHandler: ()=> {},
-    width: number;
-    height: number;
+    closeHandler: ()=> void,
+    width?: number;
+    height?: number;
     element?: ReactNode;
-    paddding: number;
+    padding?: number;
+    right?: number;
+    top?: number;
 };

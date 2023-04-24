@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-
 import { responsive } from './responsiveQuery';
 import { CarouselPropsTypes } from '@/types/CarouselPropsTypes';
 import ButtonGroup from './CustomeButtons';
@@ -14,6 +13,7 @@ const Slider: FC<CarouselPropsTypes> = (props) => {
       responsive={responsive}
       customButtonGroup={<ButtonGroup buttonsPosition={'top-right'} />}
       removeArrowOnDeviceType={['desktop', 'tablet', 'mobile']}
+      draggable={false}
     >
       {children}
     </CarouselWrapper>

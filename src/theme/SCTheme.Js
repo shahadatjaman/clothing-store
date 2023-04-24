@@ -12,14 +12,15 @@ export const theme = {
   secondary: '#065eef',
 
   /* Neutral Colors */
-  gray: '#A3A5AD',
-  'grayLight': '#BEBFC4',
+   gray: '#777777',
+  'grayLight': '#f7f8fa',
 
   white: '#FFFFFF',
   'white-dark': '#F1F2F3',
 
-  back : '#191919'
+  black : '#191919'
   },
+  shadow: '0px 0px 10px rgba(0, 0, 0, 0.08)',
   /*=====  End of Colors  ======*/
 
   /*=============================================

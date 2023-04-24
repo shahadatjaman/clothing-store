@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useRef } from 'react';
 import {
   Close,
   DismissIcon,
@@ -11,6 +11,7 @@ import { ModalPropsTypes } from '@/types/modalPropsTypes';
 
 const Modal: FC<ModalPropsTypes> = (props) => {
   const { isOpen, width, closeModal, children } = props;
+
   return (
     <Wrapper isOpen={isOpen}>
       <ModalContent width={width} isOpen={isOpen}>

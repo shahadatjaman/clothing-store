@@ -13,10 +13,8 @@ export const CarouselWrapper = styled(Carousel)<CurouselPropsTypes>`
 
 export const ButtonsGroups = styled.div<CurouselPropsTypes>`
     position: absolute;
-     width:  100%;
-
-    // align-items: ${({buttonsPosition}) => buttonsPosition === "left-right" && "center" };
-    // z-index: -1;
+    width:  100%;
+  
 `;
 
 

@@ -2,6 +2,7 @@
 import { createTheme } from '@material-ui/core/styles';
 import {ThemeProvider} from '@material-ui/core/styles';
 import { overWritedButton } from './OverWritenbutton';
+import { breakPoints } from './BreakPoints';
 
 
 const theme = createTheme({
@@ -17,6 +18,9 @@ const theme = createTheme({
       },
       
     },
+    breakpoints : {
+      ...breakPoints
+    }
   });
   
 const MuiProvider = ({children}) => {

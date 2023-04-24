@@ -3,21 +3,22 @@ import { DropdownPropsTypes } from '@/types/dropdownPropsTypes';
 import { CartLayout, CartContent, ChildrenContent } from './Styles';
 
 const Dropdown: FC<DropdownPropsTypes> = (props) => {
-  const { width, isOpen, paddding, height } = props;
+  const { width, isOpen, padding, height, right, top, closeHandler, element } =
+    props;
 
   return (
     <CartLayout>
+      {element}
       <CartContent
-        padding={paddding}
         height={height}
         isOpen={isOpen}
         cartWidth={width}
+        right={right}
+        top={top}
       >
-        {isOpen && (
-          <ChildrenContent padding={1} isOpen={isOpen}>
-            {props.children}
-          </ChildrenContent>
-        )}
+        <ChildrenContent padding={padding} isOpen={isOpen}>
+          {props.children}
+        </ChildrenContent>
       </CartContent>
     </CartLayout>
   );
