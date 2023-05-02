@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface ModalPropsTypes {
-    isOpen: boolean;
-    closeModal: ()=> any;
-    width: number;
-    padding: number;
-    children: ReactNode;
+  isOpen: boolean;
+  closeModal: () => void;
+  width: number;
+  padding: number;
+  children: ReactNode;
 }

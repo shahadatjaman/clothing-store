@@ -20,4 +20,23 @@ export const GlobalStyle = createGlobalStyle`
   button.Styles__Button-sc-15r0ui4-2.jImDrA {
     right: 2%;
   }
+  .mx-1{
+    margin-right:1rem;
+    /* &:last-child{
+      margin: 0;
+    } */
+  }
+
+  h1,h2, h3, h4, h5, h6{
+    font-family : ${(props) => props.theme.fontFamily.hind}
+  }
+
+  button.Styles__Button-sc-15r0ui4-2.gkjyVG.left-right{
+    margin-left: 1rem;
+    &:last-child{
+      right: 0;
+      margin-right: 1rem;
+    }
+  }
+ 
 `;

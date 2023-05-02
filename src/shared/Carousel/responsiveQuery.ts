@@ -1,7 +1,11 @@
-export const responsive = {
+
+
+export const responsive = (props : any) =>  {
+  const {respon} = props
+  return {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 1,
+      items: respon.device === "desktop" ? respon.items : 1,
       slidesToSlide: 1,
       paritialVisibilityGutter: 60,
     },
@@ -15,4 +19,5 @@ export const responsive = {
       items: 1,
       paritialVisibilityGutter: 30,
     },
+  }
   };

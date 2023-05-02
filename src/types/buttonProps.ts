@@ -1,9 +1,7 @@
 
-type loadingPosition = 'start' | 'end';
 
-import { string } from 'prop-types';
+
 import { ElementType, ReactNode } from 'react';
-
 
 export interface ButtonPropsTypes {
   /**
@@ -11,14 +9,13 @@ export interface ButtonPropsTypes {
    */
   children: ReactNode;
 
-  
   /**
    *
    * When user click on the button.
    *
    */
-  onClick? : ()=> any,
-  
+  onClick?: () => void;
+
   /**
    * Override or extend the styles applied to the component.
    * See [CSS API](#css) below for more details.
@@ -66,16 +63,13 @@ export interface ButtonPropsTypes {
    * The variant to use.
    */
   variant?: 'text' | 'outlined' | 'contained';
-  
+
   /**
    *
    * Button width. What'll be button width
    *
    */
-  fullWidth?: boolean,
-
+  fullWidth?: boolean;
 }
-
-
 
 export default ButtonPropsTypes;

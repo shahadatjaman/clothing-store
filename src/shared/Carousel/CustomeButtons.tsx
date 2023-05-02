@@ -1,10 +1,4 @@
-import { FC } from 'react';
-
-import {
-  ButtonGroupProps,
-  ArrowProps,
-  DotProps,
-} from 'react-multi-carousel/lib/types';
+import { ButtonGroupProps } from 'react-multi-carousel/lib/types';
 import { Button, ButtonsGroups, LeftArrow, RightArrow } from './Styles';
 
 interface CarouselButtonGroupProps extends ButtonGroupProps {
@@ -20,11 +14,14 @@ const ButtonGroup = ({
   ...rest
 }: CarouselButtonGroupProps) => {
   return (
-    <ButtonsGroups buttonsPosition={buttonsPosition}>
-      <Button buttonType="prev" onClick={previous}>
+    <ButtonsGroups
+      className={buttonsPosition === 'top-right' ? 'top-right' : ''}
+      buttonsPosition={buttonsPosition}
+    >
+      <Button className={buttonsPosition} buttonType="prev" onClick={previous}>
         <LeftArrow />
       </Button>
-      <Button buttonType="next" onClick={next}>
+      <Button className={buttonsPosition} buttonType="next" onClick={next}>
         <RightArrow />
       </Button>
     </ButtonsGroups>

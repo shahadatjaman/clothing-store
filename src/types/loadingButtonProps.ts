@@ -1,8 +1,6 @@
-
 type loadingPosition = 'start' | 'end';
 
 import { ElementType, ReactNode } from 'react';
-
 
 export interface LoadingButtonProps {
   /**
@@ -48,30 +46,25 @@ export interface LoadingButtonProps {
    * The variant to use.
    */
   variant?: 'text' | 'outlined' | 'contained';
-  
+
   /**
    *
    * Button width. What'll be button width
    *
    */
-  fullWidth?: boolean,
+  fullWidth?: boolean;
 
- /**
+  /**
    *
-   * When load data or call api. 
+   * When load data or call api.
    *
    */
-   loading: boolean,
+  loading: boolean;
 
-  
   /**
-    *
-    * When the button is loading the loading icon where should be load.    * could be start or end.
-    *
-    */
-    loadingPosition?: loadingPosition, 
-    
+   *
+   * When the button is loading the loading icon where should be load.    * could be start or end.
+   *
+   */
+  loadingPosition?: loadingPosition;
 }
-
-
-

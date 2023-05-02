@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import Carousel from 'react-multi-carousel';
+import dynamic from 'next/dynamic';
+const Carousel = dynamic(() => import('react-multi-carousel'));
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 interface CurouselPropsTypes {
     buttonsPosition?: 'top-right' | 'left-right';
     buttonType?: 'next' | 'prev';
+    mx?: number;
 };
 export const CarouselWrapper = styled(Carousel)<CurouselPropsTypes>`
    position: relative;
@@ -30,9 +32,9 @@ export const Button = styled.button<CurouselPropsTypes>`
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
-    top: 10%;
+    /* top: 10%;
     left: ${(props) => props.buttonType === 'prev' && 0}%;
-    right: ${(props) => props.buttonType === 'next' && 0}%;
+    right: ${(props) => props.buttonType === 'next' && 0}%; */
     &:hover{
         background: ${({theme}) => theme.colors.primary};
         color: ${({theme}) => theme.colors.white};

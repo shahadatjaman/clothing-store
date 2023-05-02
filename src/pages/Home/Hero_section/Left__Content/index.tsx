@@ -5,7 +5,7 @@ import Hover__Button from '@/shared/Hover__Buttoon';
 import Image from 'next/image';
 
 const Slider__Item: FC<SliderPropsTypes> = (props) => {
-  const { img_url, button_sub_title, button_title, path } = props;
+  const { img_url, button_sub_title, button_title } = props;
 
   const [isHovered, setIsHovered] = useState(false);
 

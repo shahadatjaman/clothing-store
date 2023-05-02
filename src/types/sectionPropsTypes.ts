@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface SectionPropsTypes {
-    children: ReactNode | string;
-};
+  children: ReactNode | string;
+}

@@ -35,8 +35,12 @@ export const H4 = styled.h4`
 `;
 
 export const H3 = styled.h3`
-font-size: 26px;
-    line-height: 34px;
+   font-size: 24px;
+    line-height: 30px;
     font-weight: 500;
 
 `;
+
+export const Span = styled.span`
+color: ${({theme}) => theme.colors.primary};
+`

@@ -1,15 +1,15 @@
 interface ItemsProps {
-    name : string;
-};
+  name: string;
+}
 
 interface SliderProps {
-    infinite: boolean;
-    speed: number;
-    slidesToShow: number;
-    slidesToScroll: number;
+  infinite: boolean;
+  speed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
 }
 
 export interface SliderPropsTypes {
-    items: ItemsProps[];
-    seting: SliderProps
-};
+  items: ItemsProps[];
+  seting: SliderProps;
+}
