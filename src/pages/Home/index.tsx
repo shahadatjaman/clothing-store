@@ -10,10 +10,11 @@ import Offer__Products from './Off__Products';
 import Products from './Products';
 import Popular__Brands from './Popular__Brand';
 import Follow__US from './Follow__US';
+import Layout from '../Layout';
 
 const Home = () => {
   return (
-    <>
+    <Layout>
       <Hero_Section />
 
       {/* Women's products */}
@@ -41,7 +42,7 @@ const Home = () => {
 
       {/* Follow us   */}
       <Follow__US />
-    </>
+    </Layout>
   );
 };
 
