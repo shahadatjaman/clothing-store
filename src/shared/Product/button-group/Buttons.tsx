@@ -5,6 +5,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import BalanceIcon from '@mui/icons-material/Balance';
 
 import Button from './Button';
+import { useModal } from '@/hook/useModal';
 import Modal from '@/shared/Modal';
 
 interface ButtonsProps {
@@ -12,51 +13,35 @@ interface ButtonsProps {
 }
 
 const Buttons: FC<ButtonsProps> = (props) => {
-  const [modals, setModals] = useState({
-    isOpenView: false,
-    isOpenFavorite: false,
-    isOpenCompare: false,
-  });
-
-  const quickViewHandler = () => {
-    if (!modals.isOpenView) {
-      setModals((prev) => {
-        return { ...prev, isOpenView: true };
-      });
-    }
-  };
-  const closeModal = () => {
-    if (modals.isOpenView) {
-      setModals((prev) => {
-        return { ...prev, isOpenView: false };
-      });
-    }
-  };
-
+  const { closeModal, isOpen, openModal, id } = useModal();
   return (
     <>
       {/* Quick View Button */}
       <Button
-        clickHandler={quickViewHandler}
+        clickHandler={() => openModal(0)}
         text="Quick View"
         element={<VisibilityIcon fontSize="small" />}
         isHovered={props.isHovered}
       />
-      <Modal
-        isOpen={modals.isOpenView}
-        closeModal={closeModal}
-        width={400}
-        padding={1}
-      >
-        Hello
-      </Modal>
+      {id === 0 && (
+        <Modal isOpen={isOpen} closeModal={closeModal} width={400} padding={1}>
+          Quick view
+        </Modal>
+      )}
 
       {/* Add To Favorite Button */}
       <Button
         text="You need to login"
+        clickHandler={() => openModal(1)}
         element={<FavoriteBorderIcon fontSize="small" />}
         isHovered={props.isHovered}
       />
+
+      {id === 1 && (
+        <Modal isOpen={isOpen} closeModal={closeModal} width={400} padding={1}>
+          Logon before add to wish list
+        </Modal>
+      )}
 
       {/* Add To Compare Buton */}
       <Button
