@@ -1,4 +1,5 @@
-import React, { FC, useRef } from 'react';
+import React, { FC } from 'react';
+import ReactDOM from 'react-dom';
 import {
   Close,
   DismissIcon,
@@ -9,10 +10,13 @@ import {
 } from './Styles';
 import { ModalPropsTypes } from '@/types/modalPropsTypes';
 
-const Modal: FC<ModalPropsTypes> = (props) => {
-  const { isOpen, width, closeModal, children } = props;
-
-  return (
+const Modal: FC<ModalPropsTypes> = ({
+  isOpen,
+  width,
+  closeModal,
+  children,
+}) => {
+  return ReactDOM.createPortal(
     <Wrapper isOpen={isOpen}>
       <ModalContent width={width} isOpen={isOpen}>
         <ModalHeader>
@@ -22,7 +26,8 @@ const Modal: FC<ModalPropsTypes> = (props) => {
         </ModalHeader>
         <ModalBody>{children}</ModalBody>
       </ModalContent>
-    </Wrapper>
+    </Wrapper>,
+    document.body,
   );
 };
 
